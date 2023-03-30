@@ -11,12 +11,8 @@
         "image": "https://media.cntraveler.com/photos/53da5aa96dec627b149e509d/master/w_1024,h_768,c_limit/royal-ethiad-suite-jumeirah-abu-dhabi-2.jpg",
         "roomType":"Business",
         "price":"$350"
-      },
-      "slide3": {
-        "image": "https://media.cnn.com/api/v1/images/stellar/prod/140127103345-peninsula-shanghai-deluxe-mock-up.jpg?q=w_2226,h_1449,x_0,y_0,c_fill",
-        "roomType":"Executive",
-        "price":"$550"
       }
+    
     }
   }
 ]
