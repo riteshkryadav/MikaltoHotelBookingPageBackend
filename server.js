@@ -11,6 +11,7 @@ http.createServer((req, res) => {
     try {
       res.setHeader("Access-Control-Allow-Origin", "*");
     res.setHeader("Access-Control-Allow-Headers", "*");
+    res.writeHead(200, {"Content-type":"text/html"})
     const formData = [];
     req.on("data", (formDataPieces) => {
       formData.push(formDataPieces);
@@ -22,14 +23,11 @@ http.createServer((req, res) => {
 
       let getData = async() => {
         console.log(formdata);
-        console.log("hi")
         let presentData = await fs.writeFile("./data.txt", formData);
-        formDataNew = formData + ";" + presentData;
-        await fs.writeFile("./data.txt", formDataNew);
+        await fs.appendFile("./data.txt", formData);
       }
 getData();
     })
-    //   res.write(JSON.stringify(data));
       res.end(JSON.stringify(data));
     } catch (err) {
       console.log(err);
