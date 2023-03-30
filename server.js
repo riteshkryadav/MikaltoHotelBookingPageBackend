@@ -1,5 +1,5 @@
 const http = require("http");
-const port = 8080;
+const port = 8081;
 const path = require("path");
 const fs = require("fs/promises");
 const fsx = require("fs");
@@ -36,4 +36,5 @@ getData();
     }
   }).listen(port, () => {
     console.log(`Listening to port ${port} `);
+    console.log(filePath);
   });
